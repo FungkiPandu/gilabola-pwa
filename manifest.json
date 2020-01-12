@@ -1,0 +1,22 @@
+{
+  "name": "GaliBola PWA",
+  "short_name": "GaliBola",
+  "description": "List of teams and show team's matches",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#47a202",
+  "theme_color": "#47a202",
+  "gcm_sender_id": "gcmAPIKey",
+  "icons": [
+    {
+      "src": "icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

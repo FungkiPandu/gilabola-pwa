@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#347800"/>
+
+    <title>Gali Bola</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" href="icon_512.png">
+    <link rel="icon" type="image/png" href="icon_512.png"/>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<!-- Side nav -->
+<ul id="slide-out" class="sidenav sidenav-fixed">
+    <li id="sidenav-header">
+        <div class="user-view">
+            <div class="background">
+                <img src="assets/images/gbk.jpg" alt="">
+            </div>
+            <span class="white-text name">Welcome!</span>
+            <span class="white-text email">Choose league / your favorite below</span>
+        </div>
+    </li>
+</ul>
+<!--  End of side nav  -->
+<header>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><h5>☰</h5></a>
+                <a href="#" class="brand-logo">Gali Bola</a>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="progress">
+    <div class="indeterminate"></div>
+</div>
+<main>
+    <div id="team-container" class="row" style="padding: 24px">
+        <div class="container welcoming-screen valign-wrapper">
+            <div class="center">
+                <h5>Welcome to Gali Bola App!</h5>
+                <h6 class="hide-on-large-only">
+                    Click ☰ icon on top-left screen to open list
+                    of leagues or <a href="#" data-target="slide-out" class="sidenav-trigger">click here</a>
+                </h6>
+
+                <h6 class="hide-on-med-and-down">
+                    Please choose league from side navigation on the left of screen
+                </h6>
+            </div>
+        </div>
+    </div>
+    <div id="example-container" class="row" style="padding: 24px" hidden>
+        <!-ç- Templates -->
+        <div class="fetch-error container welcoming-screen valign-wrapper">
+            <div class="center">
+                <h5>Oops :(</h5>
+                <p>
+                    Something went wrong when trying to connect to API, make sure you are connected to the internet for
+                    the first time you access this page. If this error still occur, may be you request more than 10x in
+                    1 minute. If so, please try again later.
+                </p>
+            </div>
+        </div>
+        <div class="empty-data container welcoming-screen valign-wrapper">
+            <div class="center">
+                <h5>Hah? Kosong?? :O</h5>
+            </div>
+        </div>
+        <div class="col s12 m6 team-template" style="position: relative" hidden>
+            <div class="btn-floating waves-effect waves-ripple add-favorite"
+                 style="position: absolute; top: 0; right: 0; z-index: 2; text-align: center; padding-top: 8px;">
+                <svg class="fav" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     display="none">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path class="favorite" fill="white"
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <svg class="non-fav" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path class="non-favorite" fill="white"
+                          d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                </svg>
+            </div>
+            <div class="card-panel white waves-ripple waves-effect"
+                 style="height: 133px; width: 100%">
+                <div class="row" style="margin: 0">
+                    <div class="col s3">
+                        <img class="team-logo" alt="logo" height="80px" style="object-fit: contain;"/>
+                    </div>
+                    <div class="col s9">
+                        <b>
+                            <div class="team-name">test</div>
+                        </b>
+                        <div class="team-venue">stadium</div>
+                        <div style="z-index: 2"><a class="team-url" target="_blank">website</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 match-template" style="position: relative" hidden>
+            <div class="btn-floating waves-effect waves-ripple"
+                 style="position: absolute; top: 0; right: 0; z-index: 2; text-align: center; padding-top: 8px;">
+                <svg class="fav" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     display="none">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path class="favorite" fill="white"
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <svg class="non-fav" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path class="non-favorite" fill="white"
+                          d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                </svg>
+            </div>
+            <div class="card-panel" style="width: 100%">
+                <div class="row">
+                    <span class="match-competition-name">UEFA Champions League</span> | Matchday <span
+                        class="match-day">8</span>
+                    <div class="match-date">2020-05-24T00:00:00Z</div>
+                </div>
+                <div class="row">
+                    <div class="col s2 home-team-score" style="text-align: center">
+                        5
+                    </div>
+                    <div class="col s10 home-team-name">
+                        AC Milan
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s2 away-team-score" style="text-align: center">
+                        1
+                    </div>
+                    <div class="col s10 away-team-name">
+                        Persita
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="assets/js/module/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="assets/js/module/materialize.min.js"></script>
+<script type="text/javascript" src="assets/js/module/idb.js"></script>
+<script type="text/javascript" src="assets/js/nav.js"></script>
+<script type="text/javascript" src="assets/js/api.js"></script>
+<script type="text/javascript" src="assets/js/db.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/key.js"></script>
+</html>

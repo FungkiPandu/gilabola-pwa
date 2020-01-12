@@ -1,0 +1,65 @@
+.nav-wrapper {
+    background-color: #47a202;
+}
+
+#sidenav-header {
+    background: url("../images/gbk.jpg");
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.user-view {
+    position: absolute !important;
+    bottom: 0;
+}
+
+#slide-out li {
+    padding: 0;
+}
+
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+.brand-logo {
+    font-size: large !important;
+    padding: 0 16px !important;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.welcoming-screen {
+    height: calc(100vh - 64px - 48px - 20px);
+}
+
+.welcoming-screen div {
+    width: 100%;
+}
+
+.match .card-panel .row {
+    margin: 0 0 6px;
+}
+
+.match-date {
+    font-size: 12px;
+}
+
+.match-competition-name {
+    font-weight: bold;
+}
+
+
