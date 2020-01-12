@@ -9,10 +9,11 @@ const urlsToCache = [
     { url: '/assets/css/main.css', revision: '1' },
     { url: '/assets/css/materialize.min.css', revision: '1' },
     { url: '/assets/js/module/jquery-3.4.1.min.js', revision: '1' },
+    { url: '/assets/js/module/materialize.min.js', revision: '1' },
     { url: '/assets/js/module/idb.js', revision: '1' },
     { url: '/assets/js/nav.js', revision: '2' },
     { url: '/assets/js/main.js', revision: '2' },
-    { url: '/assets/js/api.js', revision: '2' },
+    { url: '/assets/js/api.js', revision: '3' },
     { url: '/assets/js/db.js', revision: '1' },
     { url: '/assets/images/gbk.jpg', revision: '1' },
 ];

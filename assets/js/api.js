@@ -5,7 +5,7 @@ const getTeamUrl = (competitionId) => baseUrl + "/v2/competitions/" + competitio
 const getMatchesUrl = (teamId) => baseUrl + "/v2/teams/" + teamId + "/matches/";
 
 const defaultHeader = new Headers({
-    'X-Auth-Token': token,
+    'X-Auth-Token': '<YOUR-TOKEN>',
 });
 
 const checkResponse = (response) => {
